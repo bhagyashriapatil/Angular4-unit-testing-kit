@@ -1,0 +1,21 @@
+* Integration Testing => component+template
+Here Integration of component with specific html
+
+* Unit Testing => component
+
+* End-to-end test: slow, small chnge in html can break the whole
+
+Unit Testing is easy and we going t detail in It
+
+* Clean Coding Practices
+- Small fn/mtds(10 lines of code or less)
+- proper naming
+- single responsibility
+
+Arrange:  eg.: let component = new VoteComponent();
+Act:      eg.: component.upVote();
+Assert:   eg.: expect(component.totalVotes).toBe(1);
+
+
+
+
