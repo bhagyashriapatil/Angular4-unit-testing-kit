@@ -20,7 +20,7 @@ describe('CounterComponent', () => {
   beforeEach(()=>{
     fixture = TestBed.createComponent(CounterComponent);     //gives us testing version of our compo
     component = fixture.componentInstance;                   //get instance of our compo
-
+    
     // synchronus change detection
     fixture.detectChanges();
     
@@ -35,6 +35,7 @@ describe('CounterComponent', () => {
 
     // Act
     component.increment();
+    
     // fixture.detectChanges();
     const newval = component.counter;
 

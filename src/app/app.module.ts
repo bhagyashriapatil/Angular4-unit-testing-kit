@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule }  from '@angular/forms';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TemplateDrivenLoginComponent } from './template-driven-login/template-driven-login.component';
@@ -18,10 +19,12 @@ import { CounterComponent } from './counter/counter.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    JsonpModule,
     ReactiveFormsModule,
     TooltipModule.forRoot()
   ],
   providers: [],
-  bootstrap: [CounterComponent]
+  bootstrap: [TemplateDrivenLoginComponent]
 })
 export class AppModule { }

@@ -18,4 +18,76 @@ Assert:   eg.: expect(component.totalVotes).toBe(1);
 
 
 
+* Each of the Expect block is also known as a matcher.
+ There are two different types of matchers, 
+ 1.inbuilt matcher      2. user defined matchers/custom.
+
+* user defined matchers/custom: 
+ - which are not present in the inbuilt system library of Jasmine
+ - We should add custom matched in beforeEach(function(){}) function.
+
+ xit: temporary disabled it bloack
+ xdescribe: disabled describe block
+
+ inbuilt matcher:
+ - toEqual():  equivalency of the result,  similar to the “==” operator of JavaScript. 
+ - nottoEqual(): negation of the toEqual() method
+ - toBe(): matches with the type of the object, exactly equivalent to the “===” operator 
+ - nottoBe():  negation of the toBe() method
+ - toBeTruthy: whether the result is equal to true or false. 
+ - toBeFalsy: whether the result is equal to true or false.
+
+* Sequential Check
+ - toContain(): whether any element is a part of the same array or some other sequential objects
+ - toBeCloseTo():  whether the actual value is close to the expected value. 
+    eg.: expect(12.34).toBeCloseTo(12.3, 1);   //second parameter: count from decimal point
+ - toMatch(): works on String type variable, whether a specific String is present in the expected output or not
+    eg.: expect("Jasmine tutorial in tutorials.com").toMatch(/com/); 
+
+* Null Check
+ - toBedefined:  any variable in the code is predefined or not
+ - toBeUndefined: any variable is previously undefined or not
+    eg.: var undefineValue;  
+         expect(undefineValue).toBeUndefined();    //run successfully
+
+         var undefineValue=0;  
+         expect(undefineValue).toBeUndefined();    //run unsuccessfully
+
+ - toBeNull():  helps to check null values
+
+
+* Inequality Check
+ - toBeGreaterThan(): 
+ - toBeLessThan();
+ - toBeNaN(): 
+    eg.: expect(0 / 0).toBeNaN();    //run successfully value of “0/0” which cannot be determined
+
+* Exception Check
+ - toThrow()
+ - jasmine.Any():  when we are not sure about the output
+
+- beforeAll: run only once befre all test
+- beforeEach: run each time any given test
+- afterAll: run only once after all test 
+- afterEach: run after each test 
+
+* Spies
+  spy("A person who keeps watch on others secretly.")  
+  There are two types of spying technology available in Jasmine.
+  1. spyOn()     2.createSpy()
+
+- spyOn():  spy on a definite piece of code
+- toHaveBeenCalled(): fn is called 
+- createSpy(): 
+
+     
+          
+
+ 
+
+
+
+
+
+
 
